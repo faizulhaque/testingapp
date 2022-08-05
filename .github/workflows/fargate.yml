@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Deploy to Amazon ECS
+
+jobs:
+  deploy:
+    name: Deploy to ECS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check AWS Cli version
+        run: aws --version
+        shell: bash
+
+      - name: Check Docker version
+        run: docker --version
+        shell: bash 
+
+      - name: Check AWS Cli version
+        run: aws --version
+        shell: bash

@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Check AWS Cli version
-        run: aws --version
+      - name: Check Git version
+        run: git --version
         shell: bash
 
       - name: Check Docker version
@@ -23,4 +23,8 @@ jobs:
 
       - name: Check AWS Cli version
         run: aws --version
+        shell: bash
+
+      - name: Check jq version
+        run: jq --version
         shell: bash
